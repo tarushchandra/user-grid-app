@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8F7FD;
+}
+
+
+
+/* App Component */
+
+.intro-main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+}
+
+.intro-main-text p {
+    font-size: 2rem;
+}
+
+.intro-main-text p span {
+    color: #5045e7;
+}
+
+
+
+/* CardContainer Component */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+}
+
+.loading p {
+    font-size: 2rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5rem;
+    max-width: 70%;
+    margin: 3rem auto;
+    justify-content: space-between;
+}
+
+
+
+/* Navbar Component */
+
+.navbar {
+    min-height: 60px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#FBFAFF;
+    box-shadow: 1px 0 5px rgb(184, 184, 184);
+}
+
+.navbar .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.navbar .heading h1 {
+    font-weight: 700;
+}
+
+.navbar .heading i {
+    font-size: 1.2rem;
+    color: #7066ED;
+}
+
+.navbar button {
+    padding: 0.5rem 1rem;
+    background-color: #7066ED;
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+    font-weight: 500;
+}
+
+.navbar button:hover {
+    background-color: #5045e7;
+}
+
+
+
+/* Card Component */
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(168, 168, 168);
+    min-width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.card:hover {
+    transform: scale(1.08);
+}
+
+.user-info {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.card img {
+    border-radius: 100%;
+    max-width: 10rem;
+    border: 3px solid #a9a5e7;
+}
+
+.card .name-text {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.card .email-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
