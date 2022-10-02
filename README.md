@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+Method used for solving this problem -
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I've used 3 react components - Navbar, CardContainer, Card and used react functional components using hooks
 
-## Available Scripts
+App Component - 
+Installed a dependency 'axios' which is used to fetch data from api and attached the whole promises syntax inside a function named 'handleClick' which is in turn sent as a prop to the Navbar Component, inside where the 'GetUser' button is present and the function 'handleClick' is listening for onClick Events.
+then, I created 3 state variables using useState hook - areCardsRendered, users, loading.
+areCardsRendered is responsible for directing the user to click the 'GetUsers' button and update the UI accordingly
+users is initially an empty array, stores the user data when the promise made by the axios resolves using setUsers method.
+loading is initially false, on triggering this function, it becomes true and on successfully storing the data into the users array, it becomes false which in turn will help to set the loading text for the time being API fetches the data
+Now, in the JSX, there is a conditional expression which is responsible for updating the UI on the basis of values of the states.
 
-In the project directory, you can run:
+CardContainer Component - 
+This component contains the individual Cards which are rendering on the screen using map function applied to the users array along the loading text conditional expression.
 
-### `npm start`
+Card Componenent - 
+This Component is used for structuring the individual Card as they are and applying the relevant styles from the styles.css file.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Styles.css
+Mostly all of the elements have className which are being used further being used in the styles.css to style the individual elements.
+used CSS grid for card-container div.
