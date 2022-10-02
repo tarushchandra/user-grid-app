@@ -19,3 +19,7 @@ This Component is used for structuring the individual Card as they are and apply
 Styles.css
 Mostly all of the elements have className which are being used further being used in the styles.css to style the individual elements.
 used CSS grid for card-container div.
+
+
+Time taken by me to complete the assignment - 
+I started at around 2pm on 1st October and I was able to complete it by 1:30 pm on 2nd October. 
