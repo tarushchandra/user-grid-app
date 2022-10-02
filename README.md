@@ -11,7 +11,7 @@ loading is initially false, on triggering this function, it becomes true and on 
 Now, in the JSX, there is a conditional expression which is responsible for updating the UI on the basis of values of the states.
 
 CardContainer Component - 
-This component contains the individual Cards which are rendering on the screen using map function applied to the users array along the loading text conditional expression.
+This component contains the individual Cards which are rendering on the screen using map function applied to the users array along the loading text conditional expression. Card component is returned with props which in turn used to dynamically changed the content of the individual Card Component
 
 Card Componenent - 
 This Component is used for structuring the individual Card as they are and applying the relevant styles from the styles.css file.
